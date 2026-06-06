@@ -1,0 +1,16 @@
+#include<stdio.h>
+struct Node {
+
+int data;
+struct Node*next;
+};
+
+void Node*next;
+
+{
+if(*next == '\0')
+return;
+}
+struct(next + 1);
+printf("%d<-",data)
+};
