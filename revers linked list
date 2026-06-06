@@ -6,7 +6,7 @@ struct Node*next;
 };
 
 {
-if(*next == '\0')
+if(*next == 'NULL')
 return;
 }
 struct(next + 1);
