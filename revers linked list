@@ -19,7 +19,7 @@ void printReverse(struct Node* node){
 if(node == NULL)
 return;
 printReverse(node->next);
-printf("%d",node->data);
+printf("%d<-",node->data);
 }
 
 int main()
@@ -32,6 +32,7 @@ int main()
 
  printf("Reverse: ");
  printReverse(head);
+ printf("NULL\n");
  return 0;
 
 }
