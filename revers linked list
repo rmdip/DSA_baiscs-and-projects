@@ -1,14 +1,37 @@
 #include<stdio.h>
+#include<stdalign.h>
+
 struct Node {
 
 int data;
 struct Node*next;
 };
 
+struct node* createNode(int val)
 {
+    struct Node* n  = (struct Node*)malloc(sizeof(struct Node));
+    n->data = val;
+    n->next = NULL;
+    return n;
+}
+
+void printReverse(struct Node* node){
 if(*next == 'NULL')
 return;
+printRevers(node->next);
+printf("%d",node->data);
 }
-struct(Node->next);
-printf("%d<-",data)
-};
+
+int main()
+
+    //build list : 1->2->3->4->NULL
+    struct NOde* head = createNode(1);
+    head->next = creatNode(2);
+    head->next->next = createNode(3);
+    head->next->next->next = createNode(4);
+
+ printf("Revers: ")
+ printReverse(head);
+ return 0;
+
+}
