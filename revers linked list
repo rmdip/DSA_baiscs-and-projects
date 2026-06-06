@@ -16,7 +16,7 @@ struct node* createNode(int val)
 }
 
 void printReverse(struct Node* node){
-if(Node == NULL)
+if(node == NULL)
 return;
 printRevers(node->next);
 printf("%d",node->data);
