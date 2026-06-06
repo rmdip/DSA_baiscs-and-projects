@@ -1,0 +1,50 @@
+struct Node {
+    int data;         // stores the value
+    struct Node* next; // pointer to the next node
+}
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// 1. Create a new node
+struct Node* createNode(int val) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = val;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// 2. Insert at the beginning
+void insertFront(struct Node** head, int val) {
+    struct Node* newNode = createNode(val);
+    newNode->next = *head;  // new node points to old head
+    *head = newNode;        // head now points to new node
+}
+
+// 3. Print the list
+void printList(struct Node* head) {
+    struct Node* temp = head;
+    while (temp != NULL) {
+        printf("%d -> ", temp->data);
+        temp = temp->next;
+    }
+    printf("NULL\n");
+}
+
+int main() {
+    struct Node* head = NULL;
+    insertFront(&head, 30);
+    insertFront(&head, 20);
+    insertFront(&head, 10);
+    printList(head);  // Output: 10 -> 20 -> 30 -> NULL
+    return 0;
+}
