@@ -25,7 +25,7 @@ printf("%d",node->data);
 int main()
 
     //build list : 1->2->3->4->NULL
-    struct NOde* head = createNode(1);
+    struct Node* head = createNode(1);
     head->next = creatNode(2);
     head->next->next = createNode(3);
     head->next->next->next = createNode(4);
