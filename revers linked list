@@ -9,6 +9,7 @@ struct Node*next;
 if(*next == 'NULL')
 return;
 }
+int temp;
 struct(temp->next);
 printf("%d<-",data)
 };
